@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <SSDTUnitTestPath Condition="'$(SSDTUnitTestPath)' == ''">$(VsInstallRoot)\Common7\IDE\Extensions\Microsoft\SQLDB</SSDTUnitTestPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SSDTPath Condition="'$(SSDTPath)' == ''">$(VsInstallRoot)\Common7\IDE\Extensions\Microsoft\SQLDB\DAC</SSDTPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="DataModel\**" />
+    <Compile Remove="Repository\**" />
+    <Compile Remove="SQL\**" />
+    <EmbeddedResource Remove="DataModel\**" />
+    <EmbeddedResource Remove="Repository\**" />
+    <EmbeddedResource Remove="SQL\**" />
+    <None Remove="DataModel\**" />
+    <None Remove="Repository\**" />
+    <None Remove="SQL\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoFixture" Version="5.0.0-preview0007" />
+      <PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.0" />
+    <PackageReference Include="Polly" Version="8.4.1" />
+    <PackageReference Include="Serilog" Version="4.0.1" />
+      <PackageReference Include="System.Text.Json" Version="8.0.4" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\bookreview.common\atomic.chicken.common.csproj" />
+    <ProjectReference Include="..\bookreview.infrastructure\atomic.chicken.infrastructure.csproj" />
+  </ItemGroup> 
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <SsdtUnitTestVersion>3.1</SsdtUnitTestVersion>
+  </PropertyGroup>
+</Project>
