@@ -28,7 +28,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\bookreview.common\atomic.chicken.common.csproj" />
+    <ProjectReference Include="..\bookreview.common\bookreview.common.csproj" />
   </ItemGroup>
 
 </Project>

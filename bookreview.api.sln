@@ -3,24 +3,24 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "atomic.chicken.service", "bookreview.service\atomic.chicken.service.csproj", "{8C49FED5-2CA8-4F58-8FA7-34768534FFB7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bookreview.service", "bookreview.service\bookreview.service.csproj", "{8C49FED5-2CA8-4F58-8FA7-34768534FFB7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "atomic.chicken.common", "bookreview.common\atomic.chicken.common.csproj", "{0F3ED4F2-A159-449B-BCDB-96BB1A4B928C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bookreview.common", "bookreview.common\bookreview.common.csproj", "{0F3ED4F2-A159-449B-BCDB-96BB1A4B928C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0. Config", "0. Config", "{FFB37B68-F313-44D9-9102-CBB0E2EA7712}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "atomic.chicken.infrastructure", "bookreview.infrastructure\atomic.chicken.infrastructure.csproj", "{E19E5DB2-AA09-4B37-B339-70353A8335B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bookreview.infrastructure", "bookreview.infrastructure\bookreview.infrastructure.csproj", "{E19E5DB2-AA09-4B37-B339-70353A8335B5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{21DD5D72-E254-4F85-B260-02E0930FBCEC}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "atomic.chicken.test", "bookreview.unittests\atomic.chicken.test.csproj", "{4480DC22-063B-4F96-B02D-01473C8D5071}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bookreview.test", "bookreview.unittests\bookreview.test.csproj", "{4480DC22-063B-4F96-B02D-01473C8D5071}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.Controller", "1.Controller", "{4AF4F1B0-26A4-4919-84BC-A793C0C6F77C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "atomic.chicken.controller", "bookreview.controller\atomic.chicken.controller.csproj", "{50204E7C-7362-4633-A8DD-ABFBF49AD476}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bookreview.controller", "bookreview.controller\bookreview.controller.csproj", "{50204E7C-7362-4633-A8DD-ABFBF49AD476}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,9 +1,9 @@
 ﻿using bookreview.common.Models;
 using Dapper;
 
-namespace bookreview.infrastructure.SQL.Author
+namespace bookreview.infrastructure.SQL.Book
 {
-    public static partial class AuthorSQLQueries
+    public static partial class BookSlQueries
 	{
         public static DynamicParameters PatchParameter(PatchModel model)
         {
@@ -17,7 +17,7 @@ namespace bookreview.infrastructure.SQL.Author
         public static string PatchQuery(string propertyName)
         {
             return $@"
-            UPDATE Author SET @{propertyName} = @Value, 
+            UPDATE Author SET @{propertyName} = @Value,
                         ModifiedDate = GETUTCDATE()
             Where Id = @Id;";
         }
@@ -25,7 +25,7 @@ namespace bookreview.infrastructure.SQL.Author
         public static string PatchQueryMySql(string propertyName)
         {
             return $@"
-                UPDATE Author SET {propertyName} = @Value, 
+                UPDATE Author SET {propertyName} = @Value,
                             ModifiedDate = UTC_TIMESTAMP()
                 WHERE Id = @Id;";
         }

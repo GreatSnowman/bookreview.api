@@ -1,4 +1,4 @@
-﻿namespace atomic.chicken.service
+﻿namespace bookreview.service
 {
     public class Class1
     {

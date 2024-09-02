@@ -1,11 +1,11 @@
 
-using atomic.chicken.common;
-using atomic.chicken.controller.Config;
-using atomic.chicken.infrastructure.Repository.EFCore;
+using bookreview.common;
+using bookreview.controller.Config;
+using bookreview.infrastructure.Repository.EFCore;
 using Microsoft.AspNetCore.Http.Json;
 using Microsoft.EntityFrameworkCore;
 
-namespace atomic.chicken.controller
+namespace bookreview.controller
 {
 	public class Program
     {

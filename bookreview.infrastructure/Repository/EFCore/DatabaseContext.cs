@@ -1,7 +1,7 @@
-﻿using atomic.chicken.infrastructure.DataModel;
+﻿using bookreview.infrastructure.DataModel;
 using Microsoft.EntityFrameworkCore;
 
-namespace atomic.chicken.infrastructure.Repository.EFCore
+namespace bookreview.infrastructure.Repository.EFCore
 {
 	public class DatabaseContext : DbContext
     {

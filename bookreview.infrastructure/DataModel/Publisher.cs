@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace atomic.chicken.infrastructure.DataModel
+namespace bookreview.infrastructure.DataModel
 {
     public class Publisher : BaseEntity
     {

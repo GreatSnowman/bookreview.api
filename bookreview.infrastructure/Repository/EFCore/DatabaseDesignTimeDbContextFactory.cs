@@ -6,7 +6,7 @@
 ////using System.Text;
 ////using System.Threading.Tasks;
 
-////namespace atomic.chicken.infrastructure.Repository.EFCore
+////namespace bookreview.infrastructure.Repository.EFCore
 ////{
 ////	public class DatabaseDesignTimeDbContextFactory : IDesignTimeDbContextFactory<DatabaseContext>
 ////	{

@@ -1,8 +1,8 @@
-﻿using atomic.chicken.common.Models;
-using atomic.chicken.service.Services.Interfaces;
+﻿using bookreview.common.Models;
+using bookreview.service.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
-namespace atomic.chicken.controller.Controllers
+namespace bookreview.controller.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

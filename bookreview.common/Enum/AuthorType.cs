@@ -1,4 +1,4 @@
-﻿namespace atomic.chicken.common.Enum
+﻿namespace bookreview.common.Enum
 {
     public enum AuthorType
     {

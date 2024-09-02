@@ -1,6 +1,6 @@
 ﻿using Dapper;
 
-namespace atomic.chicken.infrastructure.Repository
+namespace bookreview.infrastructure.Repository
 {
     public interface IDapperRepository
     {

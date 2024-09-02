@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using atomic.chicken.infrastructure.Repository.EFCore;
+using bookreview.infrastructure.Repository.EFCore;
 
 #nullable disable
 
-namespace atomic.chicken.infrastructure.Migrations
+namespace bookreview.infrastructure.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
     [Migration("20240609143004_202406091530_Add_Book_Publisher")]
@@ -25,7 +25,7 @@ namespace atomic.chicken.infrastructure.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("atomic.chicken.infrastructure.DataModel.Author", b =>
+            modelBuilder.Entity("bookreview.infrastructure.DataModel.Author", b =>
                 {
                     b.Property<int>("AuthorId")
                         .ValueGeneratedOnAdd()
@@ -58,7 +58,7 @@ namespace atomic.chicken.infrastructure.Migrations
                     b.ToTable("Authors");
                 });
 
-            modelBuilder.Entity("atomic.chicken.infrastructure.DataModel.Book", b =>
+            modelBuilder.Entity("bookreview.infrastructure.DataModel.Book", b =>
                 {
                     b.Property<int>("BookId")
                         .ValueGeneratedOnAdd()
@@ -94,7 +94,7 @@ namespace atomic.chicken.infrastructure.Migrations
                     b.ToTable("Book");
                 });
 
-            modelBuilder.Entity("atomic.chicken.infrastructure.DataModel.Publisher", b =>
+            modelBuilder.Entity("bookreview.infrastructure.DataModel.Publisher", b =>
                 {
                     b.Property<int>("PublisherId")
                         .ValueGeneratedOnAdd()
@@ -119,16 +119,16 @@ namespace atomic.chicken.infrastructure.Migrations
                     b.ToTable("Publisher");
                 });
 
-            modelBuilder.Entity("atomic.chicken.infrastructure.DataModel.Book", b =>
+            modelBuilder.Entity("bookreview.infrastructure.DataModel.Book", b =>
                 {
-                    b.HasOne("atomic.chicken.infrastructure.DataModel.Publisher", "Publisher")
+                    b.HasOne("bookreview.infrastructure.DataModel.Publisher", "Publisher")
                         .WithMany("Books")
                         .HasForeignKey("PublisherId");
 
                     b.Navigation("Publisher");
                 });
 
-            modelBuilder.Entity("atomic.chicken.infrastructure.DataModel.Publisher", b =>
+            modelBuilder.Entity("bookreview.infrastructure.DataModel.Publisher", b =>
                 {
                     b.Navigation("Books");
                 });

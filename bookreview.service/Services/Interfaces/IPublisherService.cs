@@ -1,11 +1,11 @@
-﻿using atomic.chicken.common.Models;
+﻿using bookreview.common.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace atomic.chicken.service.Services.Interfaces
+namespace bookreview.service.Services.Interfaces
 {
     public interface IPublisherService
     {
@@ -14,5 +14,7 @@ namespace atomic.chicken.service.Services.Interfaces
         Task<PublisherModel> UpdatePublisher(PublisherModel publisher);
 
         Task<PublisherModel> GetPublisher(int id);
+
+        Task<PublisherModel> PatchProperty(PatchModel model);
     }
 }

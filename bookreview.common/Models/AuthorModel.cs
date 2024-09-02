@@ -1,10 +1,13 @@
-﻿using atomic.chicken.common.Enum;
+﻿using bookreview.common.Enum;
 
-namespace atomic.chicken.common.Models
+namespace bookreview.common.Models
 {
-    public class AuthorModel
+    public class AuthorModel : BaseModel
     {
-        public int Id { get; set; }
+         public AuthorModel()
+         {
+            Error = new ErrorModel();
+         }
 
         public string? Forename { get; set; }
 

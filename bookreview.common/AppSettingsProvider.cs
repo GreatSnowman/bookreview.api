@@ -1,4 +1,4 @@
-﻿namespace atomic.chicken.common
+﻿namespace bookreview.common
 {
 	public static class AppSettingsProvider
     {

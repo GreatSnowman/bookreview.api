@@ -1,10 +1,10 @@
-﻿using atomic.chicken.common.Enum;
-using atomic.chicken.common.Models;
+﻿using bookreview.common.Enum;
+using bookreview.common.Models;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace atomic.chicken.controller.Controllers
+namespace bookreview.controller.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

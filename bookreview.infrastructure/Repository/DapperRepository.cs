@@ -1,5 +1,5 @@
-﻿using atomic.chicken.common;
-using atomic.chicken.infrastructure.Repository.EFCore;
+﻿using bookreview.common;
+using bookreview.infrastructure.Repository.EFCore;
 using Dapper;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
@@ -7,7 +7,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using System.Data;
 
-namespace atomic.chicken.infrastructure.Repository
+namespace bookreview.infrastructure.Repository
 {
 	public class DapperRepository: IDapperRepository
     {

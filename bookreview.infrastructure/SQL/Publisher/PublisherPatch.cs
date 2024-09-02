@@ -1,10 +1,15 @@
-﻿using atomic.chicken.common.Models;
+﻿using bookreview.common.Models;
 using Dapper;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace atomic.chicken.infrastructure.SQL.Book
+namespace bookreview.infrastructure.SQL
 {
-    public static partial class BookSlQueries
-	{
+    public static partial class PublisherSQLQueries
+    {
         public static DynamicParameters PatchParameter(PatchModel model)
         {
             var param = new DynamicParameters();
@@ -17,17 +22,9 @@ namespace atomic.chicken.infrastructure.SQL.Book
         public static string PatchQuery(string propertyName)
         {
             return $@"
-            UPDATE Author SET @{propertyName} = @Value, 
+            UPDATE Publisher SET @{propertyName} = @Value, 
                         ModifiedDate = GETUTCDATE()
             Where Id = @Id;";
-        }
-
-        public static string PatchQueryMySql(string propertyName)
-        {
-            return $@"
-                UPDATE Author SET {propertyName} = @Value, 
-                            ModifiedDate = UTC_TIMESTAMP()
-                WHERE Id = @Id;";
         }
     }
 }

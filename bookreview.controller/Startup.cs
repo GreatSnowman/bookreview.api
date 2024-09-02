@@ -1,5 +1,5 @@
-﻿////using atomic.chicken.common;
-////using atomic.chicken.controller.Config;
+﻿////using bookreview.common;
+////using bookreview.controller.Config;
 ////using Microsoft.AspNetCore.Builder;
 ////using Microsoft.AspNetCore.Http.Json;
 ////using Microsoft.AspNetCore.Localization;

@@ -35,8 +35,8 @@
       <PackageReference Include="System.Text.Json" Version="8.0.4" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\bookreview.common\atomic.chicken.common.csproj" />
-    <ProjectReference Include="..\bookreview.infrastructure\atomic.chicken.infrastructure.csproj" />
+    <ProjectReference Include="..\bookreview.common\bookreview.common.csproj" />
+    <ProjectReference Include="..\bookreview.infrastructure\bookreview.infrastructure.csproj" />
   </ItemGroup> 
   <ItemGroup>
     <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />

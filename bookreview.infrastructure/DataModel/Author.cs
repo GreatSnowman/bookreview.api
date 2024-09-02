@@ -1,7 +1,7 @@
-﻿using atomic.chicken.common.Enum;
+﻿using bookreview.common.Enum;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace atomic.chicken.infrastructure.DataModel
+namespace bookreview.infrastructure.DataModel
 {
     public class Author : BaseEntity
     {
