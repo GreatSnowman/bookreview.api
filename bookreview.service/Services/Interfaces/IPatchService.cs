@@ -4,6 +4,6 @@ namespace atomic.chicken.service.Services.Interfaces
 {
     public interface IPatchService
     {
-        Task PatchProperty(PatchModel model);
+        Task<TModel> PatchProperty(PatchModel model);
     }
 }

@@ -21,22 +21,26 @@ namespace atomic.chicken.service.Services
 
         public async Task<PublisherModel> AddNewPublisher(PublisherModel publisher)
         {
-            var query = SQLQueries.PublisherInsert();
-            var param = SQLQueries.PublisherInsertParameters(publisher);
+            var query = PublisherSQLQueries.InsertQuery();
+            var param = PublisherSQLQueries.InsertParameters(publisher);
 
             var result = await _repository.ExecuteQueryStringSingleAsync<PublisherModel>(query, param);
 
             return result;
         }
 
-        public Task<PublisherModel> GetPublisher(int id)
+        public async Task<PublisherModel> GetPublisher(int id)
         {
             throw new NotImplementedException();
         }
 
-        public Task<PublisherModel> UpdatePublisher(PublisherModel author)
+        public async Task<PublisherModel> UpdatePublisher(PublisherModel publisher)
         {
-            throw new NotImplementedException();
+            var query = PublisherSQLQueries.UpdateQuery();
+            var param = PublisherSQLQueries.UpdateParameters(publisher);
+            var result = await _repository.ExecuteQueryStringSingleAsync<PublisherModel>(query, param);
+
+            return result;
         }
     }
 }

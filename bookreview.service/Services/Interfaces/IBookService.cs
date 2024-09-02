@@ -4,12 +4,12 @@ namespace atomic.chicken.service.Services.Interfaces
 {
     public interface IBookService
     {
-        BookModel GetBook(int id);
+        Task<BookModel> GetBook(int id);
 
-        BookModel InsertNewBook(BookModel model);
+        Task<BookModel> InsertNewBook(BookModel model);
 
-        BookModel DeleteBook(int id);
+        Task<BookModel> DeleteBook(int id);
 
-        BookModel UpdateBook(BookModel model);
+        Task<BookModel> UpdateBook(BookModel model);
     }
 }

@@ -4,6 +4,7 @@ using atomic.chicken.infrastructure.Repository;
 using atomic.chicken.infrastructure.SQL.Author;
 using atomic.chicken.service.Services.Interfaces;
 using Dapper;
+using atomic.chicken.infrastructure.DataModel;
 
 namespace atomic.chicken.service.Services
 {
@@ -27,9 +28,9 @@ namespace atomic.chicken.service.Services
             }
             catch (Exception ex)
             {
-                var model = new AuthorModel();
-                model.Forename = ex.Message;
-                return model;
+                author.Error.Message = ex.Message;
+
+                return author;
             }
         }
 
@@ -51,7 +52,7 @@ namespace atomic.chicken.service.Services
             }
 }
 
-        public async Task PatchProperty(PatchModel model)
+        public async Task<AuthorModel> PatchProperty(PatchModel model)
         {
             try
             {
@@ -61,7 +62,10 @@ namespace atomic.chicken.service.Services
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.InnerException?.Message);
+                var author = new AuthorModel();
+                author.Error.Message = ex.Message;
+
+                return author;
             }
         }
 

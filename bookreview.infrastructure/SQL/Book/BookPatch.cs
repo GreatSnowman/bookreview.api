@@ -17,7 +17,7 @@ namespace atomic.chicken.infrastructure.SQL.Book
         public static string PatchQuery(string propertyName)
         {
             return $@"
-            UPDATE Author SET @{propertyName} = @Value, 
+            UPDATE Author SET @{propertyName} = @Value,
                         ModifiedDate = GETUTCDATE()
             Where Id = @Id;";
         }
@@ -25,7 +25,7 @@ namespace atomic.chicken.infrastructure.SQL.Book
         public static string PatchQueryMySql(string propertyName)
         {
             return $@"
-                UPDATE Author SET {propertyName} = @Value, 
+                UPDATE Author SET {propertyName} = @Value,
                             ModifiedDate = UTC_TIMESTAMP()
                 WHERE Id = @Id;";
         }

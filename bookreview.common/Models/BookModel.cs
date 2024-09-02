@@ -1,9 +1,7 @@
 ﻿namespace atomic.chicken.common.Models
 {
-    public class BookModel
+    public class BookModel : BaseModel
     {
-        public int Id { get; set; }
-
         public string? Title { get; set; }
 
         public List<AuthorModel>? Authors { get; set; }
