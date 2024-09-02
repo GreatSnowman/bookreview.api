@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace atomic.chicken.infrastructure.Migrations
+namespace bookreview.infrastructure.Migrations
 {
     /// <inheritdoc />
     public partial class _202406091530_Add_Book_Publisher : Migration

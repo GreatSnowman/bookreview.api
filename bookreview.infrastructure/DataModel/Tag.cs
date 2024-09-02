@@ -1,4 +1,4 @@
-﻿namespace atomic.chicken.infrastructure.DataModel
+﻿namespace bookreview.infrastructure.DataModel
 {
     public class Tag
     {

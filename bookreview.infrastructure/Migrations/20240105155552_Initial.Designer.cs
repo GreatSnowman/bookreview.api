@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using atomic.chicken.infrastructure.Repository.EFCore;
+using bookreview.infrastructure.Repository.EFCore;
 
 #nullable disable
 
-namespace atomic.chicken.infrastructure.Migrations
+namespace bookreview.infrastructure.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
     [Migration("20240105155552_Initial")]
@@ -25,7 +25,7 @@ namespace atomic.chicken.infrastructure.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("atomic.chicken.infrastructure.DataModel.Author", b =>
+            modelBuilder.Entity("bookreview.infrastructure.DataModel.Author", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

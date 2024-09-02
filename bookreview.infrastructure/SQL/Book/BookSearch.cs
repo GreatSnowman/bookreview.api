@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace atomic.chicken.infrastructure.SQL.Book
+namespace bookreview.infrastructure.SQL.Book
 {
     public static partial class BookSqlQueries
     {

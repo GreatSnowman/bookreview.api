@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace atomic.chicken.infrastructure.Migrations
+namespace bookreview.infrastructure.Migrations
 {
 	/// <inheritdoc />
 	public partial class Initial : Migration

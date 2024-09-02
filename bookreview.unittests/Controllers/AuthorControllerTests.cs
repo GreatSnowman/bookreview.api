@@ -1,15 +1,15 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using atomic.chicken.common.Enum;
-using atomic.chicken.common.Models;
-using atomic.chicken.controller.Controllers;
-using atomic.chicken.service.Services.Interfaces;
+using bookreview.common.Enum;
+using bookreview.common.Models;
+using bookreview.controller.Controllers;
+using bookreview.service.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 
-namespace atomic.chicken.unittests
+namespace bookreview.unittests
 {
     [TestClass]
     public class AuthorControllerTests

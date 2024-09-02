@@ -1,4 +1,4 @@
-﻿namespace atomic.chicken.common.Models
+﻿namespace bookreview.common.Models
 {
     public class BookModel : BaseModel
     {

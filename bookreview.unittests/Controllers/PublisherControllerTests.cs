@@ -1,6 +1,6 @@
-using atomic.chicken.common.Models;
-using atomic.chicken.controller.Controllers;
-using atomic.chicken.service.Services.Interfaces;
+using bookreview.common.Models;
+using bookreview.controller.Controllers;
+using bookreview.service.Services.Interfaces;
 using Moq;
 
 namespace attomic.chicken.test.controllers

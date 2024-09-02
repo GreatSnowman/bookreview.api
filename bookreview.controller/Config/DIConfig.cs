@@ -1,12 +1,12 @@
 ﻿using AutoFixture;
-using atomic.chicken.common;
-using atomic.chicken.infrastructure.Repository;
-using atomic.chicken.infrastructure.Repository.EFCore;
-using atomic.chicken.service.Services;
-using atomic.chicken.service.Services.Interfaces;
+using bookreview.common;
+using bookreview.infrastructure.Repository;
+using bookreview.infrastructure.Repository.EFCore;
+using bookreview.service.Services;
+using bookreview.service.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
-namespace atomic.chicken.controller.Config
+namespace bookreview.controller.Config
 {
     public static partial class ServiceInitializer
     {

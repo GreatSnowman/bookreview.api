@@ -1,11 +1,11 @@
-﻿using atomic.chicken.common.Models;
-using atomic.chicken.infrastructure.DataModel;
-using atomic.chicken.infrastructure.Repository;
-using atomic.chicken.infrastructure.SQL;
-using atomic.chicken.infrastructure.SQL.Author;
-using atomic.chicken.service.Services.Interfaces;
+﻿using bookreview.common.Models;
+using bookreview.infrastructure.DataModel;
+using bookreview.infrastructure.Repository;
+using bookreview.infrastructure.SQL;
+using bookreview.infrastructure.SQL.Author;
+using bookreview.service.Services.Interfaces;
 
-namespace atomic.chicken.service.Services
+namespace bookreview.service.Services
 {
     public class BookService : IBookService
     {
@@ -40,6 +40,11 @@ namespace atomic.chicken.service.Services
                 model.Error.Message = ex.Message;
                 return model;
             }
+        }
+
+        public Task<BookModel> PatchProperty(PatchModel model)
+        {
+            throw new NotImplementedException();
         }
 
         public Task<BookModel> UpdateBook(BookModel model)

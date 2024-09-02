@@ -1,5 +1,5 @@
 ﻿
-namespace atomic.chicken.common
+namespace bookreview.common
 {
     public class ConnectionStringSettings
     {

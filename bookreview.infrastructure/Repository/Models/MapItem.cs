@@ -1,4 +1,4 @@
-﻿namespace atomic.chicken.infrastructure.Repository.Models
+﻿namespace bookreview.infrastructure.Repository.Models
 {
     public class MapItem
     {

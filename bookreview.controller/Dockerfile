@@ -7,16 +7,16 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
-COPY ["atomic.chicken.controller/atomic.chicken.controller.csproj", "atomic.chicken.controller/"]
-RUN dotnet restore "atomic.chicken.controller/atomic.chicken.controller.csproj"
+COPY ["bookreview.controller/bookreview.controller.csproj", "bookreview.controller/"]
+RUN dotnet restore "bookreview.controller/bookreview.controller.csproj"
 COPY . .
-WORKDIR "/src/atomic.chicken.controller"
-RUN dotnet build "atomic.chicken.controller.csproj" -c Release -o /app/build
+WORKDIR "/src/bookreview.controller"
+RUN dotnet build "bookreview.controller.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "atomic.chicken.controller.csproj" -c Release -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "bookreview.controller.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "atomic.chicken.controller.dll"]
+ENTRYPOINT ["dotnet", "bookreview.controller.dll"]

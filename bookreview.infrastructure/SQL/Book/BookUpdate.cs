@@ -1,7 +1,7 @@
-﻿using atomic.chicken.common.Models;
+﻿using bookreview.common.Models;
 using Dapper;
 
-namespace atomic.chicken.infrastructure.SQL
+namespace bookreview.infrastructure.SQL
 {
     public static partial class BookSqlQueries
     {

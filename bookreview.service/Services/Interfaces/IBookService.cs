@@ -1,6 +1,6 @@
-﻿using atomic.chicken.common.Models;
+﻿using bookreview.common.Models;
 
-namespace atomic.chicken.service.Services.Interfaces
+namespace bookreview.service.Services.Interfaces
 {
     public interface IBookService
     {
@@ -11,5 +11,7 @@ namespace atomic.chicken.service.Services.Interfaces
         Task<BookModel> DeleteBook(int id);
 
         Task<BookModel> UpdateBook(BookModel model);
+
+        Task<BookModel> PatchProperty(PatchModel model);
     }
 }

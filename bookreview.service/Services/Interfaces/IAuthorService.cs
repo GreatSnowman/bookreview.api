@@ -1,8 +1,8 @@
-﻿using atomic.chicken.common.Models;
+﻿using bookreview.common.Models;
 
-namespace atomic.chicken.service.Services.Interfaces
+namespace bookreview.service.Services.Interfaces
 {
-    public interface IAuthorService : IPatchService
+    public interface IAuthorService
     {
         Task<AuthorModel> AddNewAuthor(AuthorModel author);
 
@@ -11,5 +11,7 @@ namespace atomic.chicken.service.Services.Interfaces
         Task<AuthorModel> GetAuthor(int id);
 
         Task<IEnumerable<AuthorModel>> GetAllAuthors();
+
+        Task<AuthorModel> PatchProperty(PatchModel model);
     }
 }

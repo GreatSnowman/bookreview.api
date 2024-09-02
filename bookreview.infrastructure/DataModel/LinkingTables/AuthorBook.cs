@@ -1,4 +1,4 @@
-﻿namespace atomic.chicken.infrastructure.DataModel.LinkingTables
+﻿namespace bookreview.infrastructure.DataModel.LinkingTables
 {
     public class AuthorBook
     {

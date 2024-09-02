@@ -1,6 +1,6 @@
-﻿using atomic.chicken.common.Enum;
+﻿using bookreview.common.Enum;
 
-namespace atomic.chicken.common.Models
+namespace bookreview.common.Models
 {
     public class AuthorModel : BaseModel
     {

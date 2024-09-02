@@ -1,14 +1,15 @@
-﻿using atomic.chicken.common.Models;
-using atomic.chicken.infrastructure.Repository;
-using atomic.chicken.infrastructure.SQL;
-using atomic.chicken.service.Services.Interfaces;
+﻿using bookreview.common.Models;
+using bookreview.infrastructure.Repository;
+using bookreview.infrastructure.SQL;
+using bookreview.infrastructure.SQL.Author;
+using bookreview.service.Services.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace atomic.chicken.service.Services
+namespace bookreview.service.Services
 {
     public class PublisherService : IPublisherService
     {
@@ -32,6 +33,25 @@ namespace atomic.chicken.service.Services
         public async Task<PublisherModel> GetPublisher(int id)
         {
             throw new NotImplementedException();
+        }
+
+        public async Task<PublisherModel> PatchProperty(PatchModel model)
+        {
+            try
+            {
+                var paramaters = PublisherSQLQueries.PatchParameter(model);
+                var query = PublisherSQLQueries.PatchQuery(model.PropertyName);
+                var result = await _repository.ExecuteQueryStringSingleAsync<PublisherModel>(query, paramaters);
+
+                return result;
+            }
+            catch (Exception ex)
+            {
+                var publisher = new PublisherModel();
+                publisher.Error.Message = ex.Message;
+
+                return publisher;
+            }
         }
 
         public async Task<PublisherModel> UpdatePublisher(PublisherModel publisher)

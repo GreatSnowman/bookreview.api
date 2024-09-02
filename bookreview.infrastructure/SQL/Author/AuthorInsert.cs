@@ -1,8 +1,8 @@
-﻿using atomic.chicken.common.Models;
+﻿using bookreview.common.Models;
 using Dapper;
 using System.Data;
 
-namespace atomic.chicken.infrastructure.SQL.Author
+namespace bookreview.infrastructure.SQL.Author
 {
     public static partial class AuthorSQLQueries
 	{

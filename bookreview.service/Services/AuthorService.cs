@@ -1,12 +1,12 @@
 ﻿using AutoFixture;
-using atomic.chicken.common.Models;
-using atomic.chicken.infrastructure.Repository;
-using atomic.chicken.infrastructure.SQL.Author;
-using atomic.chicken.service.Services.Interfaces;
+using bookreview.common.Models;
+using bookreview.infrastructure.Repository;
+using bookreview.infrastructure.SQL.Author;
+using bookreview.service.Services.Interfaces;
 using Dapper;
-using atomic.chicken.infrastructure.DataModel;
+using bookreview.infrastructure.DataModel;
 
-namespace atomic.chicken.service.Services
+namespace bookreview.service.Services
 {
     public class AuthorService : IAuthorService
     {
@@ -58,7 +58,9 @@ namespace atomic.chicken.service.Services
             {
                 var paramaters = AuthorSQLQueries.PatchParameter(model);
                 var query = AuthorSQLQueries.PatchQuery(model.PropertyName);
-                await _repository.ExecuteQueryStringSingleAsync<AuthorModel>(query, paramaters);
+                var result = await _repository.ExecuteQueryStringSingleAsync<AuthorModel>(query, paramaters);
+
+                return result;
             }
             catch (Exception ex)
             {
