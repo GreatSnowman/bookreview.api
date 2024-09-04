@@ -23,7 +23,7 @@ namespace attomic.chicken.test.controllers
         {
             // Arrange
             var publisherToAdd = new PublisherModel { Name = "New Publisher" };
-            var expectedPublisher = new PublisherModel { PublisherId = 1, Name = "New Publisher" };
+            var expectedPublisher = new PublisherModel { Id = 1, Name = "New Publisher" };
 
             _publisherServiceMock.Setup(service => service.AddNewPublisher(publisherToAdd)).ReturnsAsync(expectedPublisher);
 
@@ -33,7 +33,7 @@ namespace attomic.chicken.test.controllers
             // Assert
             Assert.IsNotNull(result);
             Assert.IsInstanceOfType<PublisherModel>(result);
-            Assert.AreEqual(expectedPublisher.PublisherId, result.PublisherId);
+            Assert.AreEqual(expectedPublisher.Id, result.Id);
             Assert.AreEqual(expectedPublisher.Name, result.Name);
         }
 
@@ -41,8 +41,8 @@ namespace attomic.chicken.test.controllers
         public async Task UpdatePublisher_WithValidPublisher_ReturnsUpdatedPublisher()
         {
             // Arrange
-            var publisherToUpdate = new PublisherModel { PublisherId = 1, Name = "Updated Publisher" };
-            var expectedPublisher = new PublisherModel { PublisherId = 1, Name = "Updated Publisher" };
+            var publisherToUpdate = new PublisherModel { Id = 1, Name = "Updated Publisher" };
+            var expectedPublisher = new PublisherModel { Id = 1, Name = "Updated Publisher" };
 
             _publisherServiceMock.Setup(service => service.UpdatePublisher(publisherToUpdate)).ReturnsAsync(expectedPublisher);
 
@@ -52,7 +52,7 @@ namespace attomic.chicken.test.controllers
             // Assert
             Assert.IsNotNull(result);
             Assert.IsInstanceOfType<PublisherModel>(result);
-            Assert.AreEqual(expectedPublisher.PublisherId, result.PublisherId);
+            Assert.AreEqual(expectedPublisher.Id, result.Id);
             Assert.AreEqual(expectedPublisher.Name, result.Name);
         }
 
@@ -61,7 +61,7 @@ namespace attomic.chicken.test.controllers
         {
             // Arrange
             int publisherId = 1;
-            var expectedPublisher = new PublisherModel { PublisherId = publisherId, Name = "Publisher 1" };
+            var expectedPublisher = new PublisherModel { Id = publisherId, Name = "Publisher 1" };
 
             _publisherServiceMock.Setup(service => service.GetPublisher(publisherId)).ReturnsAsync(expectedPublisher);
 
@@ -71,7 +71,7 @@ namespace attomic.chicken.test.controllers
             // Assert
             Assert.IsNotNull(result);
             Assert.IsInstanceOfType<PublisherModel>(result);
-            Assert.AreEqual(expectedPublisher.PublisherId, result.PublisherId);
+            Assert.AreEqual(expectedPublisher.Id, result.Id);
             Assert.AreEqual(expectedPublisher.Name, result.Name);
         }
     }

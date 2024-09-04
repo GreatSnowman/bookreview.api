@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\bookreview.controller\atomic.chicken.controller.csproj" />
+    <ProjectReference Include="..\bookreview.controller\bookreview.controller.csproj" />
   </ItemGroup>
 
   <ItemGroup>
