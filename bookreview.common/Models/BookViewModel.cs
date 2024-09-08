@@ -1,10 +1,16 @@
-﻿namespace bookreview.common.Models
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace bookreview.common.Models
 {
-    public class BookModel : BaseModel
+    public class BookViewModel: BaseModel
     {
         public string? Title { get; set; }
 
-        public List<int>? AuthorIds { get; set; }
+        public List<AuthorModel>? Authors { get; set; }
 
         public string? Synoposis { get; set; }
 
@@ -17,6 +23,6 @@
 
         public string? YearPublished { get; set; }
 
-        public int PublisherId { get; set; }
+        public string Publisher { get; set; }
     }
 }

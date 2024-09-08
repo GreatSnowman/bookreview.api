@@ -1,5 +1,6 @@
 ﻿using bookreview.common.Enum;
 using bookreview.common.Models;
+using bookreview.service.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -10,43 +11,30 @@ namespace bookreview.controller.Controllers
     [ApiController]
     public class BookController : ControllerBase
     {
-        public BookController() { }
+        private readonly IBookService _bookService;
+
+        public BookController(IBookService bookService)
+        { 
+            _bookService = bookService;
+        }
 
         // GET api/<BookController>/5
         [HttpGet("{id}")]
-        public BookModel Get(int id)
+        public async Task<BookModel> Get(int id)
         {
-            return new BookModel()
-            {
-                Id = 1,
-                Authors = new List<AuthorModel>() 
-                {
-                    new AuthorModel()
-                    {
-                        Id = 1,
-                        AuthorType = AuthorType.Book,
-                        Forename = "Lemon",
-                        Surname = "Snicket"
-                    }
-                },
-                ISBN = "SIBN11",
-                Publisher = "MacMillian",
-                Synoposis = "It's an unfortunate event",
-                Title = "Bad Beginnings",
-                YearPublished = "1999"
-            };
+            return await _bookService.GetBook(id);
         }
 
         [HttpPost]
-        public BookModel Post(BookModel model)
+        public async Task<BookModel> Post(BookModel model)
         {
-            return model;
+            return await _bookService.InsertNewBook(model);
         }
 
         [HttpPut]
-        public BookModel Put(BookModel model)
+        public async Task<BookModel> Put(BookModel model)
         {
-            return model;
+            return await _bookService.UpdateBook(model);
         }
 
         // DELETE api/<BookController>/5

@@ -25,7 +25,9 @@
 
   <ItemGroup>
     <ProjectReference Include="..\bookreview.common\atomic.chicken.common.csproj" />
+    <ProjectReference Include="..\bookreview.common\bookreview.common.csproj" />
     <ProjectReference Include="..\bookreview.infrastructure\atomic.chicken.infrastructure.csproj" />
+    <ProjectReference Include="..\bookreview.infrastructure\bookreview.infrastructure.csproj" />
     <ProjectReference Include="..\bookreview.service\atomic.chicken.service.csproj" />
     <ProjectReference Include="..\bookreview.service\bookreview.service.csproj" />
   </ItemGroup>

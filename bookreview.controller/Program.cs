@@ -1,7 +1,6 @@
 
 using bookreview.common;
 using bookreview.controller.Config;
-using bookreview.infrastructure.Repository.EFCore;
 using Microsoft.AspNetCore.Http.Json;
 using Microsoft.EntityFrameworkCore;
 
