@@ -28,13 +28,13 @@ namespace bookreview.controller.Controllers
         [HttpPost]
         public async Task<BookModel> Post(BookModel model)
         {
-            return model;
+            return await _bookService.InsertNewBook(model);
         }
 
         [HttpPut]
-        public BookModel Put(BookModel model)
+        public async Task<BookModel> Put(BookModel model)
         {
-            return model;
+            return await _bookService.UpdateBook(model);
         }
 
         // DELETE api/<BookController>/5
