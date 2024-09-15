@@ -4,9 +4,9 @@ namespace bookreview.service.Services.Interfaces
 {
     public interface IBookService
     {
-        Task<BookModel> GetBook(int id);
+        Task<BookViewModel> GetBook(int id);
 
-        Task<BookModel> InsertNewBook(BookModel model);
+        Task<BookViewModel> InsertNewBook(BookModel model);
 
         Task<BookModel> DeleteBook(int id);
 
