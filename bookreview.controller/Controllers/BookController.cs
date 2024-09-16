@@ -20,7 +20,7 @@ namespace bookreview.controller.Controllers
 
         // GET api/<BookController>/5
         [HttpGet("{id}")]
-        public async Task<BookModel> Get(int id)
+        public async Task<BookViewModel> Get(int id)
         {
             return await _bookService.GetBook(id);
         }
