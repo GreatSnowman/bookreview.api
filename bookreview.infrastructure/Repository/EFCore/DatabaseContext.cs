@@ -41,6 +41,8 @@ namespace bookreview.infrastructure.Repository.EFCore
                 .HasOne(o => o.Publisher)
                 .WithMany(o => o.Books)
                 .HasForeignKey(o => o.PublisherId);
+
+            modelBuilder.Entity<Review>();
         }
     }
 }

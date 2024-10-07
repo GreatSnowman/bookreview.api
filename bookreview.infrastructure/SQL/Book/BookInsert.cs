@@ -12,7 +12,7 @@ namespace bookreview.infrastructure.SQL
             parameters.Add("@Synopsis", model.Synoposis);
             parameters.Add("@ISBN", model.ISBN);
             parameters.Add("@Year", model.YearPublished);
-            parameters.Add("@Publisher", model.Publisher);
+            parameters.Add("@PublisherId", model.PublisherId);
 
             return parameters;
         }
@@ -24,19 +24,14 @@ namespace bookreview.infrastructure.SQL
                         Synopsis,
                         ISBN,
                         Year,
-                        Publisher)
-                 OUTPUT INSERTED.Id,
-                        INSERTED.Title,
-                        INSERTED.Synopsis,
-                        INSERTED.ISBN,
-                        INSERTED.Year,
-                        INSERTED.Publisher
+                        PublisherId)
+                 OUTPUT INSERTED.Id
                     VALUES (
                         @Title,
                         @Synopsis,
                         @ISBN,
                         @Year,
-                        @Publisher)";
+                        @PublisherId)";
         }
     }
 }

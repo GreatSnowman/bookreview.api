@@ -22,6 +22,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.Controller", "1.Controlle
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bookreview.controller", "bookreview.controller\bookreview.controller.csproj", "{50204E7C-7362-4633-A8DD-ABFBF49AD476}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bookreview.ui", "bookreview.ui\bookreview.ui.csproj", "{610E276D-9E9B-472E-B9F8-03598EFCAB0E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,6 +50,10 @@ Global
 		{50204E7C-7362-4633-A8DD-ABFBF49AD476}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50204E7C-7362-4633-A8DD-ABFBF49AD476}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50204E7C-7362-4633-A8DD-ABFBF49AD476}.Release|Any CPU.Build.0 = Release|Any CPU
+		{610E276D-9E9B-472E-B9F8-03598EFCAB0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{610E276D-9E9B-472E-B9F8-03598EFCAB0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{610E276D-9E9B-472E-B9F8-03598EFCAB0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{610E276D-9E9B-472E-B9F8-03598EFCAB0E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
