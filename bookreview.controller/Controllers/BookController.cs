@@ -26,7 +26,7 @@ namespace bookreview.controller.Controllers
         }
 
         [HttpPost]
-        public async Task<BookModel> Post(BookModel model)
+        public async Task<BookViewModel> Post(BookModel model)
         {
             return await _bookService.InsertNewBook(model);
         }

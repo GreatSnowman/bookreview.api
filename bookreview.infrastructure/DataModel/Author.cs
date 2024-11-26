@@ -8,13 +8,13 @@ namespace bookreview.infrastructure.DataModel
         public int AuthorId { get; set; }
 
         [Column(TypeName = "nvarchar(150)")]
-        public string? Forename { get; set; }
+        public string Forename { get; set; }
 
         [Column(TypeName = "nvarchar(150)")]
-        public string? Middlename { get; set; }
+        public string Middlename { get; set; }
 
         [Column(TypeName = "nvarchar(150)")]
-        public string? Surname { get; set; }
+        public string Surname { get; set; }
 
         public AuthorType AuthorType { get; set; }
 

@@ -9,9 +9,9 @@ namespace bookreview.common.Models
             Error = new ErrorModel();
          }
 
-        public string? Forename { get; set; }
+        public string Forename { get; set; }
 
-        public string? Surname { get; set; }
+        public string Surname { get; set; }
 
         public AuthorType AuthorType { get; set; }
 

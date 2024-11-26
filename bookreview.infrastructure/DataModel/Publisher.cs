@@ -12,7 +12,7 @@ namespace bookreview.infrastructure.DataModel
         public int PublisherId { get; set; }
 
         [Column(TypeName = "nvarchar(150)")]
-        public string? Name { get; set; }
+        public string Name { get; set; }
 
         public IEnumerable<Book> Books { get; set; } = [];
     }

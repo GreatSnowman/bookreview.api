@@ -8,8 +8,8 @@ namespace attomic.chicken.test.controllers
     [TestClass]
     public class PublisherControllerTests
     {
-        private Mock<IPublisherService>? _publisherServiceMock;
-        private PublisherController? _publisherController;
+        private Mock<IPublisherService> _publisherServiceMock;
+        private PublisherController _publisherController;
 
         [TestInitialize]
         public void Setup()
