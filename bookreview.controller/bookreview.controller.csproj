@@ -1,35 +1,28 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
-
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net9.0</TargetFramework>
     <Nullable>disable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>50f18eae-c1a6-4a5f-9aa2-f6824260958c</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
-
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.7" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.7">
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.0" />
-    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
-    <PackageReference Include="Moq" Version="4.20.70" />
-    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="8.0.2" />
-    <PackageReference Include="Serilog" Version="4.0.1" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
-    <PackageReference Include="System.Text.Json" Version="8.0.4" />
+    <PackageReference Include="Microsoft.Extensions.Logging" />
+    <PackageReference Include="Moq" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" />
+    <PackageReference Include="Serilog" />
+    <PackageReference Include="Swashbuckle.AspNetCore" />
+    <PackageReference Include="System.Text.Json" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" VersionOverride="9.0.0" />
   </ItemGroup>
-
   <ItemGroup>
-    <ProjectReference Include="..\bookreview.common\atomic.chicken.common.csproj" />
     <ProjectReference Include="..\bookreview.common\bookreview.common.csproj" />
-    <ProjectReference Include="..\bookreview.infrastructure\atomic.chicken.infrastructure.csproj" />
     <ProjectReference Include="..\bookreview.infrastructure\bookreview.infrastructure.csproj" />
-    <ProjectReference Include="..\bookreview.service\atomic.chicken.service.csproj" />
     <ProjectReference Include="..\bookreview.service\bookreview.service.csproj" />
   </ItemGroup>
-
 </Project>
