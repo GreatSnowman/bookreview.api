@@ -9,9 +9,9 @@
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
   </PropertyGroup>
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+    <Nullable>disable</Nullable>
   </PropertyGroup>
   <ItemGroup>
     <Compile Remove="DataModel\**" />
@@ -28,16 +28,23 @@
     <None Include="..\.editorconfig" Link=".editorconfig" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="AutoFixture" Version="5.0.0-preview0007" />
-      <PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.0" />
-    <PackageReference Include="Polly" Version="8.4.1" />
-    <PackageReference Include="Serilog" Version="4.0.1" />
-      <PackageReference Include="System.Text.Json" Version="8.0.5" />
+    <PackageReference Include="Microsoft.Azure.Cosmos" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Analyzers" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" />
+    <PackageReference Include="Microsoft.Extensions.Logging" />
+    <PackageReference Include="Newtonsoft.Json" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" />
+    <PackageReference Include="Polly" />
+    <PackageReference Include="Serilog" />
+    <PackageReference Include="System.Text.Json" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\bookreview.common\bookreview.common.csproj" />
     <ProjectReference Include="..\bookreview.infrastructure\bookreview.infrastructure.csproj" />
-  </ItemGroup> 
+  </ItemGroup>
   <ItemGroup>
     <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
   </ItemGroup>

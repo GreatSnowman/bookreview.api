@@ -1,13 +1,7 @@
 ﻿using bookreview.common.Models;
 using bookreview.infrastructure.Repository;
 using bookreview.infrastructure.SQL;
-using bookreview.infrastructure.SQL.Author;
 using bookreview.service.Services.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace bookreview.service.Services
 {

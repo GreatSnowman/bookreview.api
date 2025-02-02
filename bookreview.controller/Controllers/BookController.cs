@@ -1,5 +1,4 @@
-﻿using bookreview.common.Enum;
-using bookreview.common.Models;
+﻿using bookreview.common.Models;
 using bookreview.service.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
@@ -26,7 +25,7 @@ namespace bookreview.controller.Controllers
         }
 
         [HttpPost]
-        public async Task<BookModel> Post(BookModel model)
+        public async Task<BookViewModel> Post(BookModel model)
         {
             return await _bookService.InsertNewBook(model);
         }

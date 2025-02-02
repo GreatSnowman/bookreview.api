@@ -1,8 +1,6 @@
 ﻿using bookreview.common.Models;
-using bookreview.infrastructure.DataModel;
 using bookreview.infrastructure.Repository;
 using bookreview.infrastructure.SQL;
-using bookreview.infrastructure.SQL.Author;
 using bookreview.service.Services.Interfaces;
 using Dapper;
 

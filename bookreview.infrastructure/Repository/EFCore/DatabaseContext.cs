@@ -26,10 +26,11 @@ namespace bookreview.infrastructure.Repository.EFCore
 
             base.OnModelCreating(modelBuilder);
 
+            modelBuilder.Entity<BaseEntity>().Property(x => x.UpdatedDate).HasDefaultValueSql("GETUTCDATE()");
+            modelBuilder.Entity<BaseEntity>().Property(x => x.CreatedDate).HasDefaultValueSql("GETUTCDATE()");
+
             modelBuilder.Entity<Author>()
                 .HasKey(o => o.AuthorId);
-
-            modelBuilder.Entity<Author>().Property(x => x.ModifiedDate).HasDefaultValueSql("GETUTCDATE()");
 
             modelBuilder.Entity<Book>()
                 .HasKey(o => o.BookId);
@@ -42,7 +43,13 @@ namespace bookreview.infrastructure.Repository.EFCore
                 .WithMany(o => o.Books)
                 .HasForeignKey(o => o.PublisherId);
 
-            modelBuilder.Entity<Review>();
+            modelBuilder.Entity<Review>()
+                .HasKey(o => o.ReviewId);
+
+            modelBuilder.Entity<Review>()
+                .HasOne<Author>()
+                .WithMany()
+                .HasForeignKey(o => o.AuthorId);
         }
     }
 }

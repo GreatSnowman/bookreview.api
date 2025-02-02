@@ -1,5 +1,4 @@
-﻿using AutoFixture;
-using bookreview.common;
+﻿using bookreview.common;
 using bookreview.infrastructure.Repository;
 using bookreview.infrastructure.Repository.EFCore;
 using bookreview.service.Services;
@@ -34,7 +33,6 @@ namespace bookreview.controller.Config
             services.AddScoped<IAuthorService, AuthorService>();
 
             services.AddScoped<IDapperRepository, DapperRepository>();
-            services.AddScoped<IFixture, Fixture>();
 
             return services;
         }
