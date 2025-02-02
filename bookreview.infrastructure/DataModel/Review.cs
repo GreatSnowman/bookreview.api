@@ -1,22 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace bookreview.infrastructure.DataModel
+﻿namespace bookreview.infrastructure.DataModel
 {
-    public class Review
+    public class Review: BaseEntity
     {
-        public int Id { get; set; }
+        public int ReviewId { get; set; }
 
-        public string Content { get; set; }
+        public string ContentAddress { get; set; }
+
+        public string ReviewSynopsis { get; set; }
 
         public int AuthorId { get; set; }
-
-        public DateTimeOffset CreatedDate { get; set; }
-
-        public DateTimeOffset ModifiedDate { get; set; }
     }
 }
  

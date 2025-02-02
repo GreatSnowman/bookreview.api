@@ -1,10 +1,8 @@
-﻿using AutoFixture;
-using bookreview.common.Models;
+﻿using bookreview.common.Models;
 using bookreview.infrastructure.Repository;
 using bookreview.infrastructure.SQL.Author;
 using bookreview.service.Services.Interfaces;
 using Dapper;
-using bookreview.infrastructure.DataModel;
 
 namespace bookreview.service.Services
 {

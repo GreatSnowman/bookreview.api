@@ -1,5 +1,4 @@
-﻿using bookreview.common.Enum;
-using bookreview.common.Models;
+﻿using bookreview.common.Models;
 using bookreview.service.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 

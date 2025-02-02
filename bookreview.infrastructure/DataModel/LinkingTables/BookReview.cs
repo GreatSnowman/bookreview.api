@@ -1,10 +1,12 @@
 ﻿namespace bookreview.infrastructure.DataModel.LinkingTables
 {
-    public class AuthorBook
+    public class BookReview : BaseEntity
     {
+        public int BookId { get; set; }
+
         public int AuthorId { get; set; }
 
-        public int BookId { get; set; }
+        public bool IsLive { get; set; }
 
         public Author Author { get; set; }
 
