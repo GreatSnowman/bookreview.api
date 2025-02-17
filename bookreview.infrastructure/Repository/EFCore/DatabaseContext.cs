@@ -28,6 +28,7 @@ namespace bookreview.infrastructure.Repository.EFCore
 
             modelBuilder.Entity<BaseEntity>().Property(x => x.UpdatedDate).HasDefaultValueSql("GETUTCDATE()");
             modelBuilder.Entity<BaseEntity>().Property(x => x.CreatedDate).HasDefaultValueSql("GETUTCDATE()");
+            modelBuilder.Entity<BaseEntity>().Property(x => x.).HasDefaultValue(false);
 
             modelBuilder.Entity<Author>()
                 .HasKey(o => o.AuthorId);

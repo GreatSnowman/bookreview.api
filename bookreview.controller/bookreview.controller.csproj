@@ -24,7 +24,7 @@
     <PackageReference Include="Serilog" />
     <PackageReference Include="Swashbuckle.AspNetCore" />
     <PackageReference Include="System.Text.Json" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" VersionOverride="9.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational"/>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\bookreview.common\bookreview.common.csproj" />

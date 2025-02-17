@@ -8,6 +8,8 @@
     <PackageVersion Include="AutoFixture" Version="5.0.0-preview0007" />
     <PackageVersion Include="coverlet.collector" Version="6.0.4" />
     <PackageVersion Include="Dapper" Version="2.1.35" />
+    <PackageVersion Include="dbup-core" Version="6.0.4" />
+    <PackageVersion Include="dbup-postgresql" Version="6.0.0-beta.44" />
     <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly" Version="9.0.1" />
     <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="9.0.1" />
     <PackageVersion Include="Microsoft.AspNetCore.OpenApi" Version="9.0.1" />
@@ -21,6 +23,7 @@
     <PackageVersion Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.1" />
     <PackageVersion Include="Microsoft.Extensions.Logging" Version="9.0.1" />
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.12.0" />
+    <PackageVersion Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
     <PackageVersion Include="Moq" Version="4.20.72" />
     <PackageVersion Include="MSTest.TestAdapter" Version="3.6.3" />
     <PackageVersion Include="MSTest.TestFramework" Version="3.6.3" />

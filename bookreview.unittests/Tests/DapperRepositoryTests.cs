@@ -10,6 +10,8 @@ using System.Data;
 using System.Threading.Tasks;
 using Xunit;
 using Microsoft.EntityFrameworkCore;
+using bookreview.infrastructure.Repository.EFCore;
+using bookreview.infrastructure.DataModel;
 
 namespace bookreview.unittests
 {
@@ -71,14 +73,14 @@ namespace bookreview.unittests
         }
 
         [Fact]
-        public void ExecuteQueryWithMultipleReturns_ShouldThrowNotImplementedException()
+        public async Task ExecuteQueryWithMultipleReturns_ShouldThrowNotImplementedException()
         {
             // Arrange
             var queryString = "SELECT * FROM Authors; SELECT * FROM Books";
             var parameters = new DynamicParameters();
 
             // Act & Assert
-            Assert.Throws<NotImplementedException>(() => _repository.ExecuteQueryWithMultipleReturns(queryString, parameters));
+            await Assert.ThrowsAsync<NotImplementedException>(async () => await _repository.ExecuteQueryWithMultipleReturns(queryString, parameters));
         }
     }
 }
